@@ -1,0 +1,41 @@
+// Place all the styles related to the questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+a, a:link, a:visited {
+  color: #38678b;
+  text-decoration: none;
+}
+
+.questionNumber {
+  text-align: left;
+}
+
+.questionText {
+  text-align: left;
+}
+
+.aspect_wrapper_choice_image {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  border: 3px solid white;
+  margin-bottom: 20px;
+}
+.aspect_wrapper_choice_image::after {
+  padding-top: 70%;
+  display: block;
+  content: "";
+}
+
+.content_choice_image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
