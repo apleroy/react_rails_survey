@@ -64,4 +64,6 @@ gem 'aws-sdk', '< 2.0'
 
 gem 'puma'
 
+gem 'friendly_id', '~> 5.1.0'
+
 ruby '2.3.0'

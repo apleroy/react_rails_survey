@@ -25,6 +25,6 @@ class SurveysController < ApplicationController
   end
 
   def set_survey
-    @survey = Survey.find(params[:id])
+    @survey = Survey.friendly.find(params[:id])
   end
 end
