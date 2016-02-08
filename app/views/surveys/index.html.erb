@@ -1,9 +1,8 @@
-<h1>Surveys Index</h1>
-
-<br/>
-
-<% @surveys.each do |survey| %>
-  <%= survey.id %>
-  <%= link_to survey.name, survey_path(survey) %>
-    <br />
-<% end %>
+<h1 class="cover-heading">
+  Surveys
+</h1>
+<p class="lead">
+  <% @surveys.each do |survey| %>
+    <div><%= link_to survey.name, survey_path(survey) %></div>
+  <% end %>
+</p>

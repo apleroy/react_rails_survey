@@ -20,6 +20,21 @@ var Question = React.createClass({
         })
     },
 
+    componentDidMount: function () {
+        this.loadQuestionFromServer();
+    },
+    loadQuestionFromServer: function () {
+        $.ajax({
+            url: this.props.url,
+            dataType: 'json',
+            success: function (question) {
+                this.setState({question: question});
+            }.bind(this),
+            error: function (xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }.bind(this)
+        });
+    },
 
     render: function () {
 

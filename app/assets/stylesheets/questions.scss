@@ -9,10 +9,12 @@ a, a:link, a:visited {
 
 .questionNumber {
   text-align: left;
+  border-bottom: 2px solid white;
 }
 
 .questionText {
   text-align: left;
+  margin-bottom: 20px;
 }
 
 .aspect_wrapper_choice_image {
@@ -22,7 +24,19 @@ a, a:link, a:visited {
   z-index: 100;
   border: 3px solid white;
   margin-bottom: 20px;
+  cursor: pointer;
+
+  &:hover {
+    border: 3px solid green;
+  }
+
+
 }
+
+.selected_choice {
+  border: 3px solid green;
+}
+
 .aspect_wrapper_choice_image::after {
   padding-top: 70%;
   display: block;

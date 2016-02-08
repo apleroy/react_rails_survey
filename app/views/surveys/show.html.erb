@@ -1,11 +1,19 @@
-<div class="inner cover">
+
+<div class="site-wrapper-inner">
+
+  <div class="cover-container">
+    <div class="inner cover">
 
   <div id="start_page">
     <%= render 'surveys/start' %>
   </div>
 
-  <div id="question_list">
-    <div id="questions"></div>
+  <!--<div id="question_list">-->
+    <!--<div id="questions"></div>-->
+  <!--</div>-->
+
+  <div id="question_list_rails">
+    <%= render partial: 'surveys/question', collection: @survey.questions.order(:number) %>
   </div>
 
   <div id="end_page">
@@ -13,6 +21,7 @@
   </div>
 
 </div>
-
+</div>
+</div>
 
 

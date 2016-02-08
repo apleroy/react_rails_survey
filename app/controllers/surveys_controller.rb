@@ -3,17 +3,11 @@ class SurveysController < ApplicationController
   respond_to :json
 
   def show
-    # @presenter = {
-    #     :questions => @survey.questions
-    #     :form => {
-    #       :action =>
-    #     }
-    # }
+
     respond_to do |format|
       format.html
       format.json {
         respond_with @survey.questions
-        #render :json => @survey.questions.to_json(:only => [], :methods => [])
       }
     end
 
@@ -23,10 +17,6 @@ class SurveysController < ApplicationController
     #respond_with Survey.all
     @surveys = Survey.all
   end
-
-  # def create
-  #   respond_with Survey.create(survey_params)
-  # end
 
   private
 

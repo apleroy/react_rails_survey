@@ -50,7 +50,7 @@ body {
 }
 .site-wrapper-inner {
   display: table-cell;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .cover-container {
   margin-right: auto;
@@ -59,8 +59,18 @@ body {
 
 /* Padding for spacing */
 .inner {
-  padding-left: 180px;
-  padding-right: 180px;
+  padding-left: 20%;
+  padding-right: 20%;
+  max-width: 1500px;
+  margin: auto;
 }
 
+.nextQuestion {
+  margin-bottom: 40px;
+}
+
+button:not(.disabled):hover {
+  background-color: green;
+  background-image: none;
+}
 

@@ -1,0 +1,60 @@
+<div class="question js-question" id="question_<%= question.number %>" style="display: none">
+  <div class="col-lg-12">
+    <h2 class="questionNumber">
+      Question #<%= question.number %>
+    </h2>
+    <h4 class="questionText">
+      <%= question.text %>
+    </h4>
+
+  </div>
+
+  <div class="col-lg-6">
+    <div class="aspect_wrapper_choice_image js-aspect_wrapper_choice_image" id="<%= question.number %>_1">
+      <div class="content_choice_image js-content_choice_image"
+           style="background-image: url(<%= question.choice_1_image.url %>"
+           id="<%= question.number %>_1">
+      </div>
+    </div>
+
+  </div>
+  <div class="col-lg-6">
+    <div class="aspect_wrapper_choice_image js-aspect_wrapper_choice_image" id="<%= question.number %>_2">
+      <div class="content_choice_image js-content_choice_image"
+           style="background-image: url(<%= question.choice_2_image.url %>"
+           id="<%= question.number %>_2">
+      </div>
+    </div>
+
+  </div>
+  <div class="col-lg-6">
+    <div class="aspect_wrapper_choice_image js-aspect_wrapper_choice_image" id="<%= question.number %>_3">
+      <div class="content_choice_image js-content_choice_image"
+           style="background-image: url(<%= question.choice_3_image.url %>"
+           id="<%= question.number %>_3">
+      </div>
+    </div>
+
+  </div>
+  <div class="col-lg-6">
+    <div class="aspect_wrapper_choice_image js-aspect_wrapper_choice_image" id="<%= question.number %>_4">
+      <div class="content_choice_image js-content_choice_image"
+           style="background-image: url(<%= question.choice_4_image.url %>"
+           id="<%= question.number %>_4">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-lg-12 nextQuestion">
+    <button type="button" class="btn btn-lg btn-success btn-block js-next_question"
+            id="next_<%= question.number %>"
+            disabled="true">
+      Submit and Go To Next Question
+    </button>
+  </div>
+
+  <br/>
+  <br/>
+
+</div>

@@ -60,4 +60,8 @@ gem 'paperclip', '~> 4.3'
 
 gem 'twitter-bootstrap-rails'
 
+gem 'aws-sdk', '< 2.0'
+
+gem 'puma'
+
 ruby '2.3.0'
