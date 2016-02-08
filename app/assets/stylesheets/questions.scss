@@ -51,5 +51,8 @@ a, a:link, a:visited {
   left: 0;
   background-size: cover;
   background-repeat: no-repeat;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size:cover;
 
 }

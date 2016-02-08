@@ -1,3 +1,18 @@
+<style>
+  .cs-image_1 {
+    background-image: url('<%= question.choice_1_image %>');
+  }
+  .cs-image_2 {
+    background-image: url('<%= question.choice_2_image %>');
+  }
+  .cs-image_3 {
+    background-image: url('<%= question.choice_3_image %>');
+  }
+  .cs_image_4 {
+    background-image: url('<%= question.choice_4_image %>');
+  }
+</style>
+
 <div class="question js-question" id="question_<%= question.number %>" style="display: none">
   <div class="col-lg-12">
     <h2 class="questionNumber">
@@ -11,8 +26,7 @@
 
   <div class="col-lg-6">
     <div class="aspect_wrapper_choice_image js-aspect_wrapper_choice_image" id="<%= question.number %>_1">
-      <div class="content_choice_image js-content_choice_image"
-           style="background-image: url(<%= question.choice_1_image.url %>"
+      <div class="content_choice_image js-content_choice_image cs-image_1"
            id="<%= question.number %>_1">
       </div>
     </div>
@@ -20,8 +34,7 @@
   </div>
   <div class="col-lg-6">
     <div class="aspect_wrapper_choice_image js-aspect_wrapper_choice_image" id="<%= question.number %>_2">
-      <div class="content_choice_image js-content_choice_image"
-           style="background-image: url(<%= question.choice_2_image.url %>"
+      <div class="content_choice_image js-content_choice_image cs-image_2"
            id="<%= question.number %>_2">
       </div>
     </div>
@@ -29,8 +42,7 @@
   </div>
   <div class="col-lg-6">
     <div class="aspect_wrapper_choice_image js-aspect_wrapper_choice_image" id="<%= question.number %>_3">
-      <div class="content_choice_image js-content_choice_image"
-           style="background-image: url(<%= question.choice_3_image.url %>"
+      <div class="content_choice_image js-content_choice_image cs-image_3"
            id="<%= question.number %>_3">
       </div>
     </div>
@@ -38,8 +50,7 @@
   </div>
   <div class="col-lg-6">
     <div class="aspect_wrapper_choice_image js-aspect_wrapper_choice_image" id="<%= question.number %>_4">
-      <div class="content_choice_image js-content_choice_image"
-           style="background-image: url(<%= question.choice_4_image.url %>"
+      <div class="content_choice_image js-content_choice_image cs_image_4"
            id="<%= question.number %>_4">
       </div>
     </div>
