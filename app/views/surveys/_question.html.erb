@@ -14,16 +14,16 @@
   <style>
 
     .cs-image_1_<%= question.number %> {
-      background-image: url('<%= question.choice_1_image %>');
+      background-image: url('<%= question.choice_1_image(:medium) %>');
     }
     .cs-image_2_<%= question.number %> {
-      background-image: url('<%= question.choice_2_image %>');
+      background-image: url('<%= question.choice_2_image(:medium) %>');
     }
     .cs-image_3_<%= question.number %> {
-      background-image: url('<%= question.choice_3_image %>');
+      background-image: url('<%= question.choice_3_image(:medium) %>');
     }
     .cs_image_4_<%= question.number %> {
-      background-image: url('<%= question.choice_4_image %>');
+      background-image: url('<%= question.choice_4_image(:medium) %>');
     }
 
   </style>

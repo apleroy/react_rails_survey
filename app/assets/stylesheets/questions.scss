@@ -27,14 +27,14 @@ a, a:link, a:visited {
   cursor: pointer;
 
   &:hover {
-    border: 3px solid green;
+    border: 3px solid #EC8BE0;
   }
 
 
 }
 
 .selected_choice {
-  border: 3px solid green;
+  border: 3px solid #EC8BE0;
 }
 
 .aspect_wrapper_choice_image::after {
