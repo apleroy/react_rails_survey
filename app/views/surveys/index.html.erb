@@ -1,8 +1,20 @@
-<h1 class="cover-heading">
-  Surveys
-</h1>
-<p class="lead">
-  <% @surveys.each do |survey| %>
-    <div><%= link_to survey.name, survey_path(survey) %></div>
-  <% end %>
-</p>
+<div class="site-wrapper-inner cs-survey_background">
+
+  <div class="cover-container">
+    <div class="inner cover">
+
+      <h1 class="cover-heading">
+        Magic Quadrant Surveys
+      </h1>
+      <p class="lead">
+        <% @surveys.each do |survey| %>
+          <div><%= link_to survey.name, survey_path(survey) %></div>
+      <% end %>
+      </p>
+
+    </div>
+  </div>
+</div>
+
+
+

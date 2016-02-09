@@ -76,3 +76,15 @@ button:not(.disabled):hover {
   background-image: none;
 }
 
+@media (max-width: 900px) {
+  .inner {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn {
+    font-size: 14px;
+  }
+}
