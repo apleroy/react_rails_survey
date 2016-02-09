@@ -1,16 +1,16 @@
 class Question < ActiveRecord::Base
   belongs_to :survey
 
-  has_attached_file :choice_1_image, styles: { medium: "400x300>", thumb: "100x100>" }
+  has_attached_file :choice_1_image, styles: { square: "256x256", medium: "400x300>", thumb: "100x100>" }
   validates_attachment_content_type :choice_1_image, content_type: /\Aimage\/.*\Z/
 
-  has_attached_file :choice_2_image, styles: { medium: "400x300>", thumb: "100x100>" }
+  has_attached_file :choice_2_image, styles: { square: "256x256", medium: "400x300>", thumb: "100x100>" }
   validates_attachment_content_type :choice_2_image, content_type: /\Aimage\/.*\Z/
 
-  has_attached_file :choice_3_image, styles: { medium: "400x300>", thumb: "100x100>" }
+  has_attached_file :choice_3_image, styles: { square: "256x256", medium: "400x300>", thumb: "100x100>" }
   validates_attachment_content_type :choice_3_image, content_type: /\Aimage\/.*\Z/
 
-  has_attached_file :choice_4_image, styles: { medium: "400x300>", thumb: "100x100>" }
+  has_attached_file :choice_4_image, styles: { square: "256x256", medium: "400x300>", thumb: "100x100>" }
   validates_attachment_content_type :choice_4_image, content_type: /\Aimage\/.*\Z/
 
 
