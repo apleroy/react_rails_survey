@@ -168,6 +168,7 @@ $(document).ready(function() {
                 var return_vars = calculateGroup(answers);
                 var phrase = return_vars[0];
                 var group_letter = return_vars[1];
+                $("#phrase").html(phrase);
                 $("#group_letter").html(group_letter);
                 $("#end_page").show();
             }
