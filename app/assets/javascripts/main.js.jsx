@@ -17,37 +17,98 @@ $(document).ready(function() {
 
     function calculateGroup(answers) {
 
-        var countA = 0;
-        var countB = 0;
-        var countC = 0;
-        var countD = 0;
-
-        var groups = ["A", "B", "C", "D"];
+        var score = 0;
+        var phrase = "";
+        var group = "";
 
         $.each(answers, function (index, value) {
             //console.log( value.question + ' : ' + value.answer );
-            if (value.answer == 1) {
-                countA += 1;
+            var q = value.question;
+            var a = value.answer;
+
+            //shoes
+            if (q == 2) {
+                if (a == 1) { score += 10 }
+                if (a == 2) { score += 10 }
+                if (a == 3) { score -= 10 }
             }
-            else if (value.answer == 2) {
-                countB += 1;
+            if (q == 4) {
+                if (a == 1) { phrase = "Hit me, baby, one more time..." }
+                if (a == 2) { phrase = "Hey, hey, Bye..Bye..Bye..." }
+                if (a == 3) { phrase = "Everybody...Backstreet's back alright..."}
+                if (a == 4) { phrase = "Genie in a bottle..."}
             }
-            else if (value.answer == 3) {
-                countC += 1;
+            if (q == 5) {
+                if (a == 1) { score -= 50 }
+                if (a == 2) { score -= 20 }
+                if (a == 3) { score += 20 }
+                if (a == 4) { score += 50 }
             }
-            else if (value.answer == 4) {
-                countD += 1;
+            if (q == 6) {
+                if (a == 1) { score -= 10 }
+                if (a == 2) { score += 10 }
+                if (a == 3) { score -= 10 }
+                if (a == 4) { score += 20 }
             }
+            if (q == 7) {
+                if (a == 3) { score += 20 }
+                if (a == 4) { score -= 10 }
+            }
+            if (q == 8) {
+                if (a == 1) {
+                    score -= 50;
+                    phrase = "Weissman Score is running running high..."
+                }
+                if (a == 2) { score -= 20 }
+                if (a == 3) { score += 20 }
+                if (a == 4) { score += 50 }
+            }
+            if (q == 9) {
+                if (a == 4) { score -= 20 }
+            }
+            if (q == 10) {
+                if (a == 1) { score += 20 }
+                if (a == 2) { score += 10 }
+                if (a == 3) { score -= 30 }
+                if (a == 4) { score -= 10 }
+            }
+            if (q == 11) {
+                if (a == 1) { score -= 20 }
+                if (a == 2) { score += 30 }
+            }
+            if (q == 13) {
+                if (a == 1) { score += 10 }
+                if (a == 2) { score -= 30 }
+                if (a == 3) { score += 20 }
+                if (a == 4) { score += 30 }
+            }
+            if (q == 14) {
+                if (a == 1) { score -= 30 }
+                if (a == 2) { score += 10 }
+                if (a == 3) { score += 20 }
+                if (a == 4) { score += 30 }
+            }
+
 
         });
 
-        var counts = [countA, countB, countC, countD];
-        var maxCount = Math.max(countA, countB, countC, countD);
-        var maxCountGroup = groups[counts.indexOf(maxCount)];
 
-        console.log(maxCountGroup);
+        console.log(score);
+        console.log(phrase);
 
-        return maxCountGroup;
+        if (score <= -80) {
+            group = "A";
+        }
+        else if (score <= -20) {
+            group = "B";
+        }
+        else if (score >= 80 ) {
+            group = "D";
+        } else {
+            group = "C";
+        }
+
+        return [phrase, group];
     }
 
     function initializeSurvey() {
@@ -104,7 +165,9 @@ $(document).ready(function() {
                 $("#question_list_rails").find(".js-question").first().show();
                 $('.js-next_question').prop('disabled', true);
             } else {
-                var group_letter = calculateGroup(answers);
+                var return_vars = calculateGroup(answers);
+                var phrase = return_vars[0];
+                var group_letter = return_vars[1];
                 $("#group_letter").html(group_letter);
                 $("#end_page").show();
             }

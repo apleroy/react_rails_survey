@@ -8,5 +8,5 @@ class ApplicationController < ActionController::Base
       resource_class.is_a?(FriendlyId) ? scoped_collection.where(slug: params[:id]).first! : scoped_collection.where(id: params[:id]).first!
     end
   end
-  
+
 end
