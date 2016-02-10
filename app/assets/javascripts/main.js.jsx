@@ -96,16 +96,18 @@ $(document).ready(function() {
         console.log(score);
         console.log(phrase);
 
-        if (score <= -80) {
-            group = "A";
+
+        if (score >= 80 ) {
+            group = "D";
         }
-        else if (score <= -20) {
+        else if (score >= 20) {
+            group = "C";
+        }
+        else if (score >= -20) {
             group = "B";
         }
-        else if (score >= 90 ) {
-            group = "D";
-        } else {
-            group = "C";
+        else {
+            group = "A";
         }
 
         return [phrase, group];
