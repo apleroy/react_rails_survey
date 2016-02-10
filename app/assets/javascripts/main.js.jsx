@@ -57,7 +57,7 @@ $(document).ready(function() {
             if (q == 8) {
                 if (a == 1) {
                     score -= 50;
-                    phrase = "Weissman Score is running running high..."
+                    phrase = "Weissman Score is optimal..."
                 }
                 if (a == 2) { score -= 20 }
                 if (a == 3) { score += 20 }
@@ -102,7 +102,7 @@ $(document).ready(function() {
         else if (score <= -20) {
             group = "B";
         }
-        else if (score >= 80 ) {
+        else if (score >= 90 ) {
             group = "D";
         } else {
             group = "C";
