@@ -93,21 +93,21 @@ $(document).ready(function() {
         });
 
 
-        console.log(score);
-        console.log(phrase);
+        //console.log(score);
+        //console.log(phrase);
 
 
-        if (score >= 80 ) {
-            group = "D";
+        if (score >= 100 ) {
+            group = "A";
         }
-        else if (score >= 20) {
-            group = "C";
-        }
-        else if (score >= -20) {
+        else if (score >= 50) {
             group = "B";
         }
+        else if (score >= 0) {
+            group = "C";
+        }
         else {
-            group = "A";
+            group = "D";
         }
 
         return [phrase, group];
