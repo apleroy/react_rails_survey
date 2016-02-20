@@ -97,13 +97,13 @@ $(document).ready(function() {
         //console.log(phrase);
 
 
-        if (score >= 120 ) {
+        if (score >= 80 ) {
             group = "A";
         }
-        else if (score >= 70) {
+        else if (score >= 40) {
             group = "B";
         }
-        else if (score >= 0) {
+        else if (score >= -10) {
             group = "C";
         }
         else {

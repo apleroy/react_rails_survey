@@ -1,5 +1,7 @@
 class Question < ActiveRecord::Base
   belongs_to :survey
+  has_many :choices, :dependent => :destroy
+  has_many :answers, :dependent => :destroy
 
   has_attached_file :choice_1_image, styles: { square: "256x256", medium: "400x300>", thumb: "100x100>" }
   validates_attachment_content_type :choice_1_image, content_type: /\Aimage\/.*\Z/
